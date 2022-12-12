@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Variable</title>
+    </head>
+    <body>
+        <script>
+        /*
+        Variable 
+        . Variable adalah tempat untuk menyimpan data
+        . Dengan menyimpan data di variable, kita bisa menggunakannya lagi dengan menyebutkan nama
+          variable nya
+        . Untuk membuat variable di JavaScript, kita bisa menggunakan kata kunci var diikuti dengan nama
+          variable nya
+        . JavaScript adalah dynamic language, artinya variable di JavaScript tidak terpaku harus
+          menggunakan satu tipe data, kita bisa mengubah-ubah tipe data di variable yang sama
+        */
+
+        var fullName;
+        var firstName;
+        var middleName;
+        var lastName;
+
+        /*
+        Mengubah Value di Variable
+        . Setelah variable di deklarasikan, kita bisa mengubah value atau nilai di dalam variable tersebut
+        . Untuk mengubahnya, kita bisa menggunakan perintah nama variable diikuti dengan tanda = (sama
+          dengan) lalu diikuti dengan value atau nilai nya
+        */
+
+        fullName = "Eko Kurniawan Khannedy";
+        firstName = "Eko";
+        middleName = "Kurniawan";
+        lastName = "Khannedy";
+
+        document.writeln(fullName);
+        document.writeln("</br>");
+        document.writeln(firstName);
+        document.writeln("</br>");
+        document.writeln(middleName);
+        document.writeln("</br>");
+        document.writeln(lastName);
+        document.writeln("</br>");
+        
+        /*
+        Membuat Variable Langsung Dengan Value
+        . Di JavaScript juga kita bisa mendeklarasikan sebuah variable, langsung dengan isi value nya
+        . Caranya kita bisa menggunakan kata kunci var, diikuti nama variable, lalu diikuti dengan tanda =
+          (sama dengan), dan di ikuti dengan value atau nilai nya
+        */
+
+        var fullName = "Eko Kurniawan Khannedy";
+        var firstName = "Eko";
+        var middleName = "Kurniawan";
+        var lastName = "Khannedy";
+
+        /*
+        Mengakses Variable
+        . Salah satu keuntungan menggunakan variable adalah variable bisa digunakan kembali
+        . Hal ini akan mempermudah ketika membutuhkan data yang sama berkali-kali
+        . Untuk mengakses variable, kita cukup menyebutkan nama variable nya
+        */
+
+        document.writeln(fullName);
+        document.writeln("</br>");
+        document.writeln(fullName);
+        document.writeln("</br>");
+        document.writeln(fullName);
+        document.writeln("</br>");
+        fullName = "Eko Khannedy";
+        document.writeln(fullName);
+        document.writeln("</br>");
+        document.writeln(fullName);
+        document.writeln("</br>");
+        
+        </script>
+    </body>
+</html>

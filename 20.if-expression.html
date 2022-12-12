@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>If Expressions</title>
+</head>
+<body>
+    <script>
+    
+    /*
+    If Expression
+    . Dalam JavaScript, if adalah salah satu kata kunci yang digunakan untuk percabangan
+    . Percabangan artinya kita bisa mengeksekusi kode program tertentu ketika suatu kondisi terpenuhi
+    . Hampir di semua bahasa pemrograman mendukung if expression
+    */
+
+    /*
+    Else Expression
+    . Blok if akan dieksekusi ketika kondisi if bernilai true
+    . Kadang kita ingin melakukan eksekusi program tertentu jika kondisi if bernilai false
+    . Hal ini bisa dilakukan menggunakan else expression
+    */
+
+    /*
+    Else If Expression
+    . Kadang dalam If, kita butuh membuat beberapa kondisi
+    . Kasus seperti ini, di JavaScript kita bisa menggunakan Else If expression
+    */
+
+    //const examValue = 90;
+    const examValue = 70;
+
+    if(examValue > 80){
+        document.writeln("<p>Good Job : A </p>");
+    } else if (examValue > 70){
+        document.writeln("<p>Good Job : B </p>");
+    } else if (examValue > 60){
+        document.writeln("<p>Good Job : C </p>"); 
+    } else {
+        document.writeln("<p>Try againt Next Year</p>");
+    }
+    </script>
+</body>
+</html>

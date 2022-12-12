@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Scope</title>
+</head>
+<body>
+    <script>
+    
+    /*
+    Scope
+    ● Scope merupakan area akses sebuah data
+    ● Ada dua jenis scope, global scope dan local scope.
+    ● Setiap kita membuat function, maka kita akan membuat local scope untuk function tersebut
+    ● Data di global scope bisa diakses dari local scope, namun data di local scope hanya bisa di akses di
+      local scope tersebut atau di scope local dibawahnya (dalam kasus function dalam function)
+    */
+
+    /*Global Scope*/
+
+    //global scope
+    let counter = 0;
+
+    //global scope
+    function hitMe(){
+        //local scope hitme
+        counter++;
+    }
+    
+    //global scope
+    function other(){
+        //local scope other
+    }
+
+    hitMe();
+    hitMe();
+    hitMe();
+
+    console.info(counter);
+
+    /*Local Scope*/
+
+    function first(){
+        //local scope first 
+        let firstVariable = "Hello first";
+        console.info(firstVariable);// variablenya bisa di akses karena masih di local scope
+    }
+
+    function second(){
+        //local scope second
+        let secondVariable = "second";
+        //console.info(firstVariable);// error,variablenya tdk bisa di akses karena berada di local scope function lain
+    }
+
+    first();
+    second();
+
+    //global scope, jadi variablenya tidak bisa dia akses dari local scope
+    //console.info(firstVariable);//error
+    //console.info(secondVariable);//error
+
+    /*Nested Function Scope*/
+    
+    function nested(){
+        //local scope first 
+        let nestedVariable = "Hello Nested";
+
+        function firstNested(){
+            console.info(nestedVariable)// bisa mengakses variable nestedVariable
+            const firstNestedVariable = "first Nested"
+        }
+    
+        firstNested();
+        //console.info(firstNestedVariable); //error, karena di luar scope local
+    }
+
+    nested();
+    
+    </script>
+</body>
+</html>

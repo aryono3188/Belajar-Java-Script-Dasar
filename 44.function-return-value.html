@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Function Return Value</title>
+</head>
+<body>
+    <script>
+    
+    /*
+    Function Return Value
+    ● Secara default, function itu tidak menghasilkan value apapun, namun jika kita ingin, kita bisa
+      membuat sebuah function mengembalikan value
+    ● Agar function bisa menghasilkan value, kita bisa menggunakan kata kunci return di dalam function
+      nya.
+    ● Dan di dalam block function, untuk menghasilkan nilai tersebut, kita harus menggunakan kata
+      kunci return, lalu diikuti dengan data yang ingin kita hasilkan.
+    ● Function hanya bisa mengembalikan satu data, jika kita ingin mengembalikan beberapa data
+      sekaligus, kita bisa menggunakan Array sebagai return value nya
+    */
+
+    //Membuat function dengan parameter dan return value
+
+    function sayHelloWord(firstName,lastName){
+        const say = `Hello ${firstName} ${lastName}`;
+        return say;
+    };
+    
+    //Memanggil function dan menagkap return valuenya
+
+    const hasil = sayHelloWord("Haryono", "SE");
+    document.writeln(`<p>${hasil}</p>`);
+
+    //Function Return Value Lebih Dari Satu
+
+    function getFinalScore(value){
+        if (value > 90 ){
+            return "A";
+        }else if (value > 80){
+            return "B";
+        }else if (value > 70 ){
+            return "C";
+        }else if (value > 60 ){
+            return "D";
+        }else {
+            return "E";
+        }
+    }
+
+    const finalValue = getFinalScore(90);
+    document.writeln(`<p>${finalValue}</p>`)
+
+    /*
+    Menghentikan Eksekusi dengan Return
+    ● Saat kita menggunakan kata kunci return, maka kode setelah return tersebut tidak akan dieksekusi
+    ● Kita bisa menggunakan return untuk menghentikan eksekusi sebuah function
+    */
+
+    function isContains(array, searchValue){
+        for (const element of array) {
+            console.info(`Iterasi Element ${element}`)
+            if(element === searchValue){
+                return true;
+            }
+        }
+        return false
+    }
+
+    const array = [1,32,4324,31,43,53,53,43,43,535,35,5];
+    const searchValue = 43;//coba ganti ganti data yg di array
+    const found = isContains(array, searchValue);
+    document.writeln(`<p>${found}</p>`)
+
+    </script>
+</body>
+</html>

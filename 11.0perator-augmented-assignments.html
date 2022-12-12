@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Operator Augmented Assignments</title>
+    </head>
+    <body>
+        <script>
+        /*
+        Operator Matematika
+        . JavaScript mendukung banyak sekali operator Matematika untuk tipe data Number, seperti :
+        . Operator Aritmatika
+        . Operator Augmented Assignments
+        . Operator Unary
+        . Dan lain-lain
+        */
+
+        /*
+        Operator Augmented Assignments
+        Operator Matematika         Operator Augmented Assigments
+        result = result + 10        result += 10
+        result = result - 10        result -= 10
+        result = result * 10        result *= 10
+        result = result ** 10       result **= 10
+        result = result / 10        result /= 10
+        result = result % 10        result %= 10
+        */
+            let result = 1 + 2; //hasilnya 3
+            document.writeln("<p>1+2 = " + result + "</p>");
+            let originalResult = result; // 3 original result sebagai variable penampungan
+
+            result -= 1; //hasilnya 2
+            document.writeln("<p>" + originalResult + "-1 =" + result + "</p>");
+            originalResult = result;//2
+
+            result *= 2; //hasilnya 4
+            document.writeln("<p>" + originalResult + "*2 =" + result + "</p>");
+        </script>
+    </body>
+</html>

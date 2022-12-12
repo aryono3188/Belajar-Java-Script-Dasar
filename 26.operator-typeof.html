@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Operator Typeof</title>
+</head>
+<body>
+    <script>
+    
+    /*
+    Operator typeof
+    ● typeof merupakan operator yang bisa kita gunakan untuk melihat tipe data sebuah value atau
+      variable
+    ● Karena JavaScript merupakan dynamic langauge, jadi kadang kita perlu mengecek tipe data sebuah
+      value atau variable menggunakan operator typeof
+    ● Hasil dari operator typeof adalah string tipe datanya
+    */
+
+    /*
+    Type            Hasil Operator typeof
+    Undefined       “undefined”
+    Null            “object”
+    Boolean         “boolean”
+    Number          “number”
+    BitInt          “bigint”
+    String          “string”
+    Symbol          “symbol”
+    Function        “function”
+    Lainnya         “object”
+    */
+
+    //let data; //hasilnya undefined
+    //let data = null; // hasilnya object
+    //let data = "Haryono"; // hasilnya string
+    //let data = true; // hasilnya bolean
+    let data = 100; // hasilnya number
+
+    const typeData = typeof data;
+    document.writeln(`<p>${typeData}</p>`);
+
+    </script>
+</body>
+</html>

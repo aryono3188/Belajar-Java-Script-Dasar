@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Tipe Data Array</title>
+    </head>
+    <body>
+        <script>
+        /*
+        Tipe Data Array
+        . Array adalah tipe data yang berisikan kumpulan data
+        . Array di JavaScript memiliki sifat dinamis, artinya datanya bisa bertambah dengan sendirinya saat
+          kita memasukkan data ke dalam Array
+        */
+
+        /*
+        Cara Kerja Array
+        . Setiap data di Array akan disimpan dalam posisi berurutan, dimana urutan pertama dimulai dari
+          nomor 0
+        . Setiap kita menambah data ke Array, otomatis data akan disimpan di urutan terakhir
+        . Urutan di Array, kita sebut dengan index
+        */
+            
+            let arrayKosong = [];
+
+            let arrayNama = ["Haryono", "Belajar", "JavaScripts"];
+
+            console.info(arrayKosong);
+            console.info(arrayNama);
+
+            //Menambah Data Ke Array
+
+            const names = [];
+            names.push("Haryono");
+            names.push("Belajar", "JavaScripts");
+            names.push("Semangat", "Pantang", "Menyerah");
+
+            console.table(names);
+
+            /*
+            Operasi di Array
+            Operasi                 Keterangan
+            array.push(value)       Menambah data ke Array
+            array.length            Untuk mendapatkan panjang Array
+            array[index]            Mendapat data di posisi index
+            array[index] = value    Mengubah data di posisi index
+            delete array[index]     Menghapus data di posisi index, namun index tidak bergeser
+            */
+
+            console.table(names[0]);
+            console.table(names[1]);
+            console.table(names[2]);
+            console.table(names[4]);
+            console.table(names[5]);
+
+            names[1] ="Programmer";
+
+            console.table(names);
+
+            delete names[4];
+
+            console.table(names);
+
+            names.push("Haryono Lagi");
+
+            console.table(names);
+
+            /*
+            Perlu Diingat
+            . Data di dalam Array tidak ada batasannya harus data apa
+            . Jadi kita bisa memasukkan data apapun ke dalam Array
+            . Bahkan kita juga bisa memasukkan Array ke dalam Array jika kita mau
+            */
+
+            names[4] = "Pantang Lagi";
+            names.push(1,2,3,4,5,);
+            names.push(["Haryono","Belajar", "JavaScripts"]);//array dalam array
+            console.table(names);
+
+        </script>
+    </body>
+</html>

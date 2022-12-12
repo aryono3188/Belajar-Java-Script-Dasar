@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Masalah Variable Var</title>
+</head>
+<body>
+    <script>
+    
+    /*
+    Masalah Variable var
+    ● Sebelumnya sudah dijelaskan bahwa penggunaan var sudah tidak direkomendasikan lagi, dan
+      diganti dengan let
+    ● Pertanyaannya kenapa?
+    ● Alasan var tidak direkomendasikan digunakan lagi adalah, karena var tidak memiliki block scope,
+      artinya dia tidak mengikat ke local scope yang sebelumnya sudah kita bahas
+    ● Karena masalah ini, var bisa tidak terprediksi
+    ● Kita akan buat contoh penggunaan var dan let
+    */
+    
+    //Menggunakan let
+    let i = 20;
+
+    for (let i = 0; i < 10; i++){
+        //local scope
+        console.info(`LOcal ${i}`);
+    }
+
+    console.info(`Global ${i}`);
+    
+    //Menggunakan Var
+     
+    var a = 20;
+
+    for (var a = 0; a < 10; a++){
+        //local scope
+        console.info(`LOcal ${a}`);
+    }
+
+    console.info(`Global ${a}`);
+    </script>
+</body>
+</html>

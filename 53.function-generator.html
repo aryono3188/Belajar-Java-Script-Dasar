@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Function Generator</title>
+</head>
+<body>
+    <script>
+    
+    /*
+    Function Generator
+    ● Function generator adalah function yang digunakan untuk membuat data generator
+    ● Generator adalah data yang bisa di interasi seperti Array
+    ● Untuk membuat function generator, kita perlu menggunakan tanda * (bintang) setelah kata
+      function
+    ● Dan untuk mengembalikan data di tiap iterasi, kita bisa gunakan kata kunci yield diikuti datanya
+    */
+    
+    /*Function Generator Sederhana*/
+
+    function* createNames(){
+        yield "Haryono";
+        yield "Belajar";
+        yield "JavaScript";
+    }
+
+    //console.info(createNames());
+    
+    const names = createNames();
+    //console.info(names(0)); //tidak bisa di akses dengan index, hanya bisa dilakukan dengan iterasi for of
+    for (const name of names) {
+        console.info(name);
+    }
+
+    /*Function Generator Kompleks*/
+
+    //lazy
+    function* buatGanjil(value){
+        for(let i =1; i <= value; i++){
+            if(i % 2 === 1){
+                console.info(`Yield ${i}`);
+                yield i;
+            }
+        }
+    }
+
+    const numbers = buatGanjil(100);
+    //for (const number of numbers) {
+      //  console.info(number);
+    //}
+
+    //eager
+    function* buatGanjilArray(value){
+        const result = []
+        for(let i =1; i <= value; i++){
+            if(i % 2 === 1){
+                console.info(`Yield ${i}`);
+                result.push(i);
+            }
+        }
+        return result;
+    }
+
+    const numbersArray = buatGanjilArray(100);
+    for (const number of numbersArray) {
+        console.info(number);
+    } 
+
+    /*Lazy Evaluation
+    ● Generator itu sifatnya lazy
+    ● Jadi artinya jika kita tidak data belum kita ambil dari generator, maka yield selanjutnya tidak akan
+      di eksekusi
+    */
+    
+    console.info(numbers.next().value);
+    console.info(numbers.next().value);
+    console.info(numbers.next().value);
+
+    </script>
+</body>
+</html>
